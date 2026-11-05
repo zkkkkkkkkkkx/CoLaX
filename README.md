@@ -9,7 +9,7 @@ CoLaX addresses this **local–global ambiguity** by learning **local temporal p
 
 ## 🏗️ Framework
 
-![CoLaX Framework](motivation.pdf)
+![CoLaX Framework](motivation.png)
 
 💡 **Key idea:** A local pattern should not be interpreted independently of the temporal context in which it occurs.
 
