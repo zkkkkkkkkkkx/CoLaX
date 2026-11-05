@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Model weights / datasets (large, generated artifacts)
+checkpoints/
+datasets/
+runs/
+*.pt
+*.pth
+*.npy
+*.npz
+
+# Results / generated output
+results.txt
+results/
+
+# IDE
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

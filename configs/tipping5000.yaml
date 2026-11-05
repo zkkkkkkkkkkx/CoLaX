@@ -1,0 +1,21 @@
+base:
+  root_dir: ./
+
+dataset:
+  name: tipping5000
+  meta_dataset: default
+
+# 类别数小于等于prototype
+tipping5000:
+  num_classes: 4      # 修改为你的类别数
+  seq_len: 1000       # 修改为你的时间长度 T
+  proto_len: 100
+  num_prototypes: 4   # 向后兼容：如果未设置 num_prototypes_local 或 num_prototypes_global，将使用此值
+  num_prototypes_local: 4   # Local prototypes 数量（可选，默认使用 num_prototypes）
+  num_prototypes_global: 4  # Global prototypes 数量（可选，默认使用 num_prototypes）
+  d_model: 128      # Embedding dimension (default: 128)
+  patch_len: 4      # Patch length for patch embedding (default: 4)
+  stride: 1         # Stride for patch embedding (default: 1)
+  e_layers_global: 1
+  e_layers_local: 6
+

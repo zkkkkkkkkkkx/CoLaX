@@ -1,0 +1,14 @@
+base:
+  root_dir: ./
+
+dataset:
+  name: amoc_lrcesm_ocean
+  meta_dataset: default
+
+amoc_lrcesm_ocean:
+  num_classes: 2      # 修改为你的类别数
+  seq_len: 200        # 修改为你的时间长度 T
+  proto_len: 20
+  num_prototypes: 4
+
+

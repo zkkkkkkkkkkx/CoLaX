@@ -1,0 +1,13 @@
+defaults:
+#  datasets: mcce,mcch,mtce,mtch,mitecg,tipping20000,amoc_lrcesm_ocean,amoc_lrcesm_structure，amoc_cmip6_tipping
+#  datasets: chlorineconcentration,computers,ecg5000,faceall,gunpoint,wafer
+#  datasets: arrowhead,bme,car,cbf,chinatown,cincecgtorso,coffee,computers,cricketx,crickety,cricketz,crop,diatomsizereduction,distalphalanxoutlineagegroup,distalphalanxoutlinecorrect,earthquakes,ecg200,ecg5000,faceall,gunpoint,wafer
+  datasets: arrowhead,bme,car,cbf,chinatown,cincecgtorso,coffee,computers,cricketx,crickety,cricketz,crop,diatomsizereduction,distalphalanxoutlineagegroup,distalphalanxoutlinecorrect,earthquakes,ecg200,ecg5000,faceall,gunpoint,wafer
+#  datasets: chinatown,cincecgtorso,coffee,cricketx,crickety,cricketz,crop,diatomsizereduction,distalphalanxoutlineagegroup,distalphalanxoutlinecorrect,earthquakes,ecg200
+#train: false
+#  test: true1
+#  datasets: cricketx,crickety,cricketz,crop,diatomsizereduction,distalphalanxoutlineagegroup,distalphalanxoutlinecorrect,distalphalanxshape,earthquakes,ecg200
+  train: false
+  test: true
+  meta_dataset: "ucr"
+  timexpp_method_name: "TimeX++"

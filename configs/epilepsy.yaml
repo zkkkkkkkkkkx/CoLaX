@@ -1,0 +1,23 @@
+base:
+  root_dir: ./
+dataset:
+  name: epilepsy
+  meta_dataset: uea
+
+multi:
+  dataset: Epilepsy         # UEA native multivariate dataset
+  num_classes: 4             # epilepsy / running / sawing / walking
+  seq_len: 206
+  proto_len: 4              # ~31% of seq_len
+  num_prototypes_local: 2
+  num_prototypes_global: 2
+  d_model: 32
+  patch_len: 4
+  stride: 1
+  e_layers_local: 2
+  e_layers_global: 1
+  batch_size: 8
+  shapley_permutations: 30
+  fuse_method: hybrid
+  fuse_alpha: 0.5
+  perturbation_num_steps: 20

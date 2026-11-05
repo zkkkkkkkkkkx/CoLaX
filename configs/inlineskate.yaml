@@ -1,0 +1,22 @@
+base:
+  root_dir: ./
+dataset:
+  name: inlineskate
+  meta_dataset: ucr  # UCR dataset - must be 'ucr'
+
+inlineskate:
+  num_classes: 7
+  seq_len: 1882  # Time series length (from UCR data)
+  proto_len: 313  # Prototype length (~16% of seq_len)
+  num_prototypes: 7
+  num_prototypes_local: 7
+  num_prototypes_global: 7
+  # Model architecture parameters
+  d_model: 128      # Embedding dimension
+  patch_len: 8      # Patch length for patch embedding
+  stride: 1         # Stride for patch embedding
+  e_layers_global: 1
+  e_layers_local: 6
+  # Perturbation-based evaluation parameters
+  perturbation_num_steps: 20  # Number of perturbation steps for evaluation
+  perturbation_positive_threshold: 0.75  # Threshold for positive class in AUPRC calculation

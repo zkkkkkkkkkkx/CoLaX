@@ -1,0 +1,75 @@
+# 跨模型泛化验证配置文件示例
+# 用于在LR-CESM上评估CMIP6训练的模型
+
+# 模型配置
+model:
+  path: checkpoints/explainer/amoc_cmip6_colax.pt
+  type: transformer  # transformer, cnn, lstm
+  d_inp: 1          # 输入特征维度
+  max_len: 50       # 最大序列长度（transformer需要）
+  n_classes: 2      # 类别数
+
+# 数据配置
+data:
+  # CMIP6训练数据（用于参考格式）
+  cmip6_path: datasets/amoc_cmip6.pt
+  
+  # LR-CESM测试数据（二选一）
+  # 选项1：预处理好的.pt文件
+  lrcesm_path: datasets/amoc_lrcesm.pt
+  
+  # 选项2：原始NetCDF文件目录（如果lrcesm_path不存在，将使用此选项）
+  lrcesm_input_dir: datasets/amoc/Data/LR-CESM/Ocean
+  lrcesm_variable: AMOC
+  lrcesm_pattern: "AMOC_structure*.nc"
+  
+  # 数据对齐
+  target_seq_len: null  # null表示从CMIP6数据自动推断
+
+# 评估配置
+evaluation:
+  batch_size: null    # null表示不使用批处理
+  device: cpu         # cpu 或 cuda
+
+# 输出配置
+output:
+  dir: results/cross_model_validation
+  save_predictions: true  # 是否保存预测结果
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

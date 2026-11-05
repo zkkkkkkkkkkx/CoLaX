@@ -1,0 +1,62 @@
+base:
+  root_dir: ./
+
+dataset:
+  name: surrogate_chick_heart_aaft  # 对应datasets/目录下的.pt文件名（不含扩展名）
+  meta_dataset: default
+
+# surrogate_chick_heart_aaft数据集配置
+surrogate_chick_heart_aaft:
+  num_classes: 2        # 二分类（0=远离临界点, 1=接近临界点）
+  seq_len: 150          # 序列长度（需要与surrogate项目的滑动窗口大小一致）
+  proto_len: 40         # prototype长度（Colax的参数，用于shapelet提取）
+  num_prototypes: 4     # prototype数量
+
+# 模型配置
+model:
+  classifier_model: cnn  # 可选: cnn, lstm, transformer
+  # 如果使用transformer，可以使用以下参数：
+  # trans_dim_feedforward: 64
+  # trans_dropout: 0.1
+  # d_pe: 16
+
+# 训练配置（如果需要，可以在runner中设置）
+# training:
+#   batch_size: 32
+#   learning_rate: 0.001
+#   num_epochs: 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

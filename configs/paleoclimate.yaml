@@ -1,0 +1,65 @@
+base:
+  root_dir: ./
+
+dataset:
+  name: paleoclimate_aaft  # 对应datasets/目录下的.pt文件名（不含扩展名）
+  meta_dataset: default
+
+# paleoclimate数据集配置
+paleoclimate_aaft:
+  num_classes: 2        # 二分类（0=远离临界点, 1=接近临界点）
+  seq_len: 300          # 序列长度（根据实际数据调整，通常是300或500）
+  proto_len: 40         # prototype长度（Colax的参数，用于shapelet提取）
+  num_prototypes: 4     # prototype数量
+
+# 模型配置
+model:
+  classifier_model: cnn  # 可选: cnn, lstm, transformer
+  
+# 如果使用transformer，可以取消下面的注释：
+# model:
+#   classifier_model: transformer
+#   trans_dim_feedforward: 64
+#   trans_dropout: 0.1
+#   d_pe: 16
+
+# 训练配置（如果需要，可以在runner中设置）
+# training:
+#   batch_size: 32
+#   learning_rate: 0.001
+#   num_epochs: 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

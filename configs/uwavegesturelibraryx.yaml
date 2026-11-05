@@ -1,0 +1,22 @@
+base:
+  root_dir: ./
+dataset:
+  name: uwavegesturelibraryx
+  meta_dataset: ucr  # UCR dataset - must be 'ucr'
+
+uwavegesturelibraryx:
+  num_classes: 8
+  seq_len: 315  # Time series length (from UCR data)
+  proto_len: 78  # Prototype length (~24% of seq_len)
+  num_prototypes: 8
+  num_prototypes_local: 8
+  num_prototypes_global: 8
+  # Model architecture parameters
+  d_model: 128      # Embedding dimension
+  patch_len: 8      # Patch length for patch embedding
+  stride: 1         # Stride for patch embedding
+  e_layers_global: 1
+  e_layers_local: 6
+  # Perturbation-based evaluation parameters
+  perturbation_num_steps: 20  # Number of perturbation steps for evaluation
+  perturbation_positive_threshold: 0.75  # Threshold for positive class in AUPRC calculation

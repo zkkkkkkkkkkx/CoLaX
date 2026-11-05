@@ -1,0 +1,22 @@
+base:
+#  root_dir: /home/gbsguest/Research/boson/TS/XTS/Colax-beta
+    root_dir: D:\Colax-main\Colax-main
+dataset:
+  name: mtce
+  meta_dataset: default
+
+mtce:
+  num_classes: 2
+  seq_len: 1400  # aligned with original freqshape split 311
+  proto_len: 100
+  num_prototypes: 2
+  num_prototypes_local: 2
+  num_prototypes_global: 2
+  # Model architecture parameters (optional, will use defaults if not specified)
+  d_model: 128      # Embedding dimension (default: 128)
+  patch_len: 8      # Patch length for patch embedding (default: 4)
+  stride: 1         # Stride for patch embedding (default: 1)
+  e_layers_global: 1
+  e_layers_local: 6
+
+

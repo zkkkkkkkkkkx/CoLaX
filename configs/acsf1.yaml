@@ -1,0 +1,22 @@
+base:
+  root_dir: ./
+dataset:
+  name: acsf1
+  meta_dataset: ucr  # UCR dataset - must be 'ucr'
+
+acsf1:
+  num_classes: 10
+  seq_len: 1460  # Time series length (from UCR data)
+  proto_len: 243  # Prototype length (~16% of seq_len)
+  num_prototypes: 10
+  num_prototypes_local: 10
+  num_prototypes_global: 1
+  # Model architecture parameters
+  d_model: 64      # Embedding dimension
+  patch_len: 4      # Patch length for patch embedding
+  stride: 1         # Stride for patch embedding
+  e_layers_global: 1
+  e_layers_local: 6
+  # Perturbation-based evaluation parameters
+  perturbation_num_steps: 20  # Number of perturbation steps for evaluation
+  perturbation_positive_threshold: 0.75  # Threshold for positive class in AUPRC calculation

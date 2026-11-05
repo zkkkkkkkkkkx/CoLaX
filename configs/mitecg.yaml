@@ -1,0 +1,22 @@
+base:
+#  root_dir: /home/gbsguest/Research/boson/TS/XTS/Colax-beta
+    root_dir: ./
+dataset:
+  name: mitecg
+  meta_dataset: default
+
+mitecg:
+  num_classes: 2
+  batch_size: 2
+  seq_len: 360
+  proto_len: 40
+  num_prototypes: 2
+  num_prototypes_local: 2
+  num_prototypes_global: 2
+  d_model: 128      # Embedding dimension (default: 128)
+  patch_len: 4      # Patch length for patch embedding (default: 4)
+  stride: 1         # Stride for patch embedding (default: 1)
+  e_layers_global: 1
+  e_layers_local: 1
+
+

@@ -1,0 +1,58 @@
+base:
+  root_dir: ./  # Set this to your project root directory
+dataset:
+  name: <dataset_name>  # Use lowercase dataset name from DATA_DICT in get_data.py
+  meta_dataset: ucr  # Must be 'ucr' for UCR datasets
+
+<dataset_name>:  # Replace with actual dataset name (lowercase)
+  num_classes: <num_classes>  # Number of classes in the dataset
+  seq_len: <seq_len>  # Sequence length (number of time steps)
+  proto_len: 30  # Prototype length (adjust based on seq_len)
+  num_prototypes: 4  # Number of local prototypes
+  num_prototypes_local: 4
+  num_prototypes_global: 4
+  # Model architecture parameters
+  d_model: 128      # Embedding dimension
+  patch_len: 4      # Patch length for patch embedding
+  stride: 1         # Stride for patch embedding
+  e_layers_global: 1
+  e_layers_local: 6
+  dropout: 0.1
+  n_heads: 8
+  d_ff: 256
+
+# Example: For ECG200 dataset
+# base:
+#   root_dir: ./
+# dataset:
+#   name: ecg200
+#   meta_dataset: ucr
+# ecg200:
+#   num_classes: 2
+#   seq_len: 96
+#   proto_len: 30
+#   ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

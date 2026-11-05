@@ -1,0 +1,37 @@
+base:
+  root_dir: ./
+dataset:
+  name: gunpoint
+  meta_dataset: ucr  # UCR dataset - must be 'ucr'
+
+gunpoint:
+  num_classes: 2
+  seq_len: 150  # Time series length (from UCR data)
+  proto_len: 50  # Prototype length (~33% of seq_len)
+  num_prototypes: 2
+  num_prototypes_local: 2
+  num_prototypes_global: 2
+  # Model architecture parameters
+  d_model: 128      # Embedding dimension
+  patch_len: 4      # Patch length for patch embedding
+  stride: 1         # Stride for patch embedding
+  e_layers_global: 1
+  e_layers_local: 6
+  # Perturbation-based evaluation parameters
+  perturbation_num_steps: 20  # Number of perturbation steps for evaluation
+  perturbation_positive_threshold: 0.75  # Threshold for positive class in AUPRC calculation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+base:
+  root_dir: ./
+
+dataset:
+  name: tipping200000sims.pt
+  meta_dataset: default
+
+tipping200000sims:
+  num_classes: 4      # 修改为你的类别数
+  seq_len: 500        # 修改为你的时间长度 T
+  proto_len: 40
+  num_prototypes: 4
+
+

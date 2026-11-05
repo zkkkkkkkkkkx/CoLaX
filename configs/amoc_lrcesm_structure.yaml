@@ -1,0 +1,13 @@
+base:
+  root_dir: ./
+
+dataset:
+  name: amoc_lrcesm_structure
+  meta_dataset: default
+
+amoc_lrcesm_structure:
+  num_classes: 2      # 修改为你的类别数
+  seq_len: 50         # 修改为你的时间长度 T (根据实际数据)
+  proto_len: 20
+  num_prototypes: 4
+
