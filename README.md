@@ -7,6 +7,10 @@
 
 CoLaX addresses this **local–global ambiguity** by learning **local temporal prototypes** alongside **global context representations**. An **input-dependent gating mechanism** conditions the relevance of local patterns on the global sequence. The resulting representations guide structured, segment-level perturbations of a separately trained, frozen black-box classifier, and **Shapley-based attribution** produces a temporal saliency map.
 
+## 🏗️ Framework
+
+![CoLaX Framework](motivation.pdf)
+
 💡 **Key idea:** A local pattern should not be interpreted independently of the temporal context in which it occurs.
 
 ## ✨ Highlights
